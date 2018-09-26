@@ -17,10 +17,10 @@ function addRouteHandler (method, path, fn) {
   // If using router.use(middleware) then set a catch all path
   if (!fn) {
     fn = path;
-    path = "/*";
+    path = "(.*)";
   }
 
-  var keys = []
+  var keys = [];
   var re = pathToRegexp(path, keys);
 
   /**
