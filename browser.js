@@ -20,8 +20,8 @@ function addRouteHandler (method, path, fn) {
     path = "/*";
   }
 
-  var re = pathToRegexp(path);
-  var keys = re.keys;
+  var keys = []
+  var re = pathToRegexp(path, keys);
 
   /**
    * Construct a routeHandler
